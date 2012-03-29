@@ -4,19 +4,18 @@
 class Contact_Contact {
 
     private $table;
-    
-    public function init(){
-Zend_Db_Table::setDefaultAdapter(Pimcore_Resource_Mysql::get());
 
-//        $db =Zend_Db::factory('PDO_MYSQL', array(
-//    'host'     => 'localhost',
-//    'username' => 'root',
-//    'password' => '',
-//    'dbname'   => 'pimcore'
-//));
+    public function init() {
+        $db = Pimcore_Resource_Mysql::get();
+        if (Pimcore_Version::$revision > 1350) {
+            Zend_Db_Table::setDefaultAdapter($db->getResource());
+        } else {
+            Zend_Db_Table::setDefaultAdapter($db);
+        }
+
 //        Newsletter_DbTable_Shortcuts::setDefaultAdapter($db);
         $this->table = new Contact_DbTable_Contact();
-        
+
     }
     /**
      *
@@ -32,17 +31,16 @@ Zend_Db_Table::setDefaultAdapter(Pimcore_Resource_Mysql::get());
         $metadata = Zend_Json_Encoder::encode($meta);
 
         $this->table->insert(array("sender"=>$sender,"receiver"=>$receiver,"subject"=>$subject,"text"=>$text,"meta"=>$metadata,"date"=>time()));
-        
-        return true;
-    }   
-   
 
-    public function read(){
-        
-        $rows = $this->table->fetchAll();
-       
-        return $rows->toArray();
+        return true;
     }
 
+
+    public function read(){
+
+        $rows = $this->table->fetchAll();
+
+        return $rows->toArray();
+    }
 
 }
