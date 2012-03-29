@@ -2,7 +2,6 @@ pimcore.registerNS("pimcore.plugin.contact");
 
 pimcore.plugin.contact = Class.create(pimcore.plugin.admin, {
 
-
     getClassName: function () {
         return "pimcore.plugin.contact";
     },
@@ -13,7 +12,6 @@ pimcore.plugin.contact = Class.create(pimcore.plugin.admin, {
 
 
     uninstall: function() {
-    
     },
 
     pimcoreReady: function (params,broker){
@@ -24,16 +22,12 @@ pimcore.plugin.contact = Class.create(pimcore.plugin.admin, {
             text: t('Contact history'),
             iconCls:"contact_icon",
             handler: function(){
-              var gestion = new contact.history;
+                var gestion = new contact.history;
             }
         });
-        
+
         toolbar.insert(4,action);
-        
-
     }
-
-
 
 });
 

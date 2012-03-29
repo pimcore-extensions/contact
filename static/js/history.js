@@ -6,12 +6,8 @@ contact.history = Class.create({
         this.createPanel();
     },
 
-    
-
-
-
     createPanel: function(){
-        
+
         var tabPanel = Ext.getCmp("pimcore_panel_tabs");
 
         var layout = this.getHistory();
@@ -33,14 +29,14 @@ contact.history = Class.create({
         tabPanel.activate("contactBody");
 
     },
-    
-/////////////////////////////////////////////////////////////////////
-//Paneau Users
-    
+
+    /////////////////////////////////////////////////////////////////////
+    //Paneau Users
+
     getHistory: function(){
 
         var expander = new Ext.ux.grid.RowExpander({
-        tpl : new Ext.Template('{metadata}<br/>{text}')
+            tpl : new Ext.Template('{metadata}<br/>{text}')
         });
         var group = new Ext.grid.GroupingView({
             forceFit:true,
@@ -51,7 +47,7 @@ contact.history = Class.create({
             url: '/plugin/Contact/admin/history'
         });
 
-       
+
 
         var readerFields = [
         {
@@ -96,15 +92,18 @@ contact.history = Class.create({
             proxy: proxy,
             reader: reader,
             writer: writer,
-            sortInfo:{field: 'date', direction: "DESC"},
+            sortInfo:{
+                field: 'date',
+                direction: "DESC"
+            },
             groupField:'receiver'
         });
-        
+
         // create the Grid
         this.ugrid = new Ext.grid.GridPanel({
             store: this.ustore,
             plugins: expander,
-            view: group, 
+            view: group,
             columns: [expander,
             {
                 id       :'id',
@@ -141,9 +140,9 @@ contact.history = Class.create({
                 sortable : true,
                 dataIndex: 'date',
                 renderer: function(d) {
-                        var date = new Date(d * 1000);
-                        return date.format("d/m/Y H:i:s");
-                    }
+                    var date = new Date(d * 1000);
+                    return date.format("d/m/Y H:i:s");
+                }
             }
             ],
             stripeRows: true,
@@ -155,14 +154,9 @@ contact.history = Class.create({
             // config options for stateful behavior
             id:'ContactGrid'
         });
-        
+
         this.ustore.load();
         return this.ugrid;
     }
-
-
-    
-
-
 
 });
