@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<zend-config xmlns:zf="http://framework.zend.com/xml/zend-config-xml/1.0/">
+  <plugin>
+    <pluginName>Contact</pluginName>
+    <pluginDescription>Send and list the emails of contacts</pluginDescription>
+    <pluginNiceName>Contact</pluginNiceName>
+    <pluginIcon>/plugins/Contact/static/img/contact_logo.png</pluginIcon>
+    <pluginServer>thirdpartyplugins.pimcore.org</pluginServer>
+    <pluginVersion>1.0.0</pluginVersion>
+    <pluginRevision>3</pluginRevision>
+    <pluginBuildTimestamp>1297238039</pluginBuildTimestamp>
+    <pluginIframeSrc></pluginIframeSrc>
+    <pluginClassName>Contact_Plugin</pluginClassName>
+    <pluginIncludePaths>
+      <path>/Contact/lib</path>
+      <path>/Contact/controllers</path>
+      <path>/Contact/models</path>
+    </pluginIncludePaths>
+    <pluginNamespaces>
+      <namespace>Contact</namespace>
+      <namespace>Contact</namespace>
+    </pluginNamespaces>
+    <pluginJsPaths>
+      <path>/Contact/static/js/contactplugin.js</path>
+      <path>/Contact/static/js/history.js</path>
+      <path>/Contact/static/js/rowexpander.js</path>      
+    </pluginJsPaths>
+    <pluginCssPaths>
+      <path>/Contact/static/css/admin.css</path>
+    </pluginCssPaths>
+  </plugin>
+</zend-config>
