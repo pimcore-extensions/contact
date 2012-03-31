@@ -44,8 +44,7 @@ class Contact_Contactlib
         }
         $mail = Pimcore_Tool::getMail(array(), $subject);
         $mail->setBodyHtml($info . $text);
-        $mail->clearFrom();
-        $mail->setFrom($sender);
+        $mail->setReplyTo($sender);
         $mail->addTo($receiver);
         $mail->send();
 
