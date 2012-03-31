@@ -29,7 +29,7 @@ class Contact_Contact
     public function create($sender, $receiver, $subject, $text, $meta)
     {
         $this->init();
-        $metadata = Zend_Json_Encoder::encode($meta);
+        $metadata = Zend_Json::encode($meta);
 
         $this->table->insert(array("sender" => $sender, "receiver" => $receiver, "subject" => $subject, "text" => $text, "meta" => $metadata, "date" => time()));
 
