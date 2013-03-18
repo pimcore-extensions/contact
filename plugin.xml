@@ -8,7 +8,7 @@
         <pluginNiceName>Pimcore Contact Plugin</pluginNiceName>
         <pluginIcon>/plugins/PimContact/static/img/contact_logo.png</pluginIcon>
         <pluginServer>plugins.pimcore.org</pluginServer>
-        <pluginVersion>1.0.0</pluginVersion>
+        <pluginVersion>1.1.0</pluginVersion>
         <pluginRevision></pluginRevision>
         <pluginBuildTimestamp></pluginBuildTimestamp>
         <pluginClassName>PimContact_Plugin</pluginClassName>
