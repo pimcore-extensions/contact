@@ -1,0 +1,8 @@
+{
+    "config": {
+        "vendor-dir": "vendor"
+    },
+    "require": {
+        "emagister/zend-form-decorators-bootstrap": "dev-master"
+    }
+}

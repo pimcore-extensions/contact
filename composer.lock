@@ -1,0 +1,71 @@
+{
+    "hash": "34243fad1f64e551a32091ed0286dcd6",
+    "packages": [
+        {
+            "name": "emagister/zend-form-decorators-bootstrap",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Emagister/zend-form-decorators-bootstrap.git",
+                "reference": "c08fddcaef6074cd5463ebcd86a0a602d4ae2cb3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Emagister/zend-form-decorators-bootstrap/zipball/c08fddcaef6074cd5463ebcd86a0a602d4ae2cb3",
+                "reference": "c08fddcaef6074cd5463ebcd86a0a602d4ae2cb3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Twitter_": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "include-path": [
+                ""
+            ],
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "EmagisterTech",
+                    "email": "php@emagister.com",
+                    "homepage": "http://engineering.emagister.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Zend_Form decorators for Twitter's Bootstrap UI",
+            "homepage": "https://emagister.github.com/zend-form-decorators-bootstrap",
+            "keywords": [
+                "bootstrap",
+                "twitter",
+                "twitter bootstrap",
+                "zend",
+                "zend form",
+                "zend form decorators"
+            ],
+            "time": "2013-02-27 18:49:23"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "emagister/zend-form-decorators-bootstrap": 20
+    },
+    "platform": [
+
+    ],
+    "platform-dev": [
+
+    ]
+}

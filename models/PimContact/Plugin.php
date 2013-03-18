@@ -32,6 +32,13 @@ class PimContact_Plugin extends Pimcore_API_Plugin_Abstract implements Pimcore_A
 {
     const DB_TABLE = 'plugin_pimcontact';
 
+    public function __construct($jsPaths = null, $cssPaths = null)
+    {
+        parent::__construct($jsPaths, $cssPaths);
+
+        require_once 'autoload.php';
+    }
+
     public static function install()
     {
         $queries = array(

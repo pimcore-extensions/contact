@@ -16,6 +16,7 @@
             <path>/PimContact/lib</path>
             <path>/PimContact/controllers</path>
             <path>/PimContact/models</path>
+            <path>/PimContact/vendor</path>
         </pluginIncludePaths>
         <pluginNamespaces>
             <namespace>Modern</namespace>
