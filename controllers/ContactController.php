@@ -61,7 +61,7 @@ class Pimcontact_ContactController extends PimContact_Controller_Action
                 ? isset($options[self::CONFIG_SUBJECT_OPTION])
                 : sprintf($this->_translate->_('Contact message from %s'), $this->_request->getHttpHost());
             $message = nl2br($values['message']);
-            unset($values['email'], $values['message']);
+            unset($values['email'], $values['message'], $values['cpt']);
 
             $contact = new PimContact();
 
