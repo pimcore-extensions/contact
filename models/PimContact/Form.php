@@ -14,21 +14,21 @@
  * to kontakt@modernweb.pl so we can send you a copy immediately.
  *
  * @category    Pimcore
- * @package     Plugin_Contact
- * @author      Rafał Gałka <rafal@modernweb.pl>
- * @copyright   Copyright (c) 2007-2011 ModernWeb (http://www.modernweb.pl)
+ * @package     Plugin_PimContact
+ * @author      Rafał Gałka <rafal.galka@modernweb.pl>
+ * @copyright   Copyright (c) 2007-2013 ModernWeb (http://www.modernweb.pl)
  * @license     http://www.modernweb.pl/license/new-bsd     New BSD License
  */
 
 /**
- * Example contact form.
+ * Basic contact form.
  *
  * @category    Pimcore
- * @package     Plugin_Contact
- * @author      Rafał Gałka <rafal@modernweb.pl>
- * @copyright   Copyright (c) 2007-2011 ModernWeb (http://www.modernweb.pl)
+ * @package     Plugin_PimContact
+ * @author      Rafał Gałka <rafal.galka@modernweb.pl>
+ * @copyright   Copyright (c) 2007-2013 ModernWeb (http://www.modernweb.pl)
  */
-class Contact_Form extends Zend_Form
+class PimContact_Form extends Zend_Form
 {
     public function init()
     {
@@ -83,9 +83,9 @@ class Contact_Form extends Zend_Form
                 'timeout' => 300,
                 'width' => 120,
                 'dotNoiseLevel' => 2,
-                'font' => PIMCORE_PLUGINS_PATH . '/Contact/static/fonts/bebas.ttf',
+                'font' => PIMCORE_PLUGINS_PATH . '/PimContact/static/fonts/bebas.ttf',
                 'fontSize' => 24,
-                'imgDir' => PIMCORE_TEMPORARY_DIRECTORY . "/",
+                'imgDir' => PIMCORE_TEMPORARY_DIRECTORY . '/',
                 'imgUrl' => str_replace(PIMCORE_DOCUMENT_ROOT, '', PIMCORE_TEMPORARY_DIRECTORY) . "/",
             )
         ));

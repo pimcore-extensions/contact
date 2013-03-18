@@ -1,7 +1,7 @@
 # Pimcore Contact Plugin #
 
 ## Origin  ##
-This plugin comes from @mookymook (http://www.grafyweb.com/).
+This plugin is based on the code from @mookymook (http://www.grafyweb.com/).
 
 Info: http://www.pimcore.org/forum/discussion/266/plugin-contact
 
